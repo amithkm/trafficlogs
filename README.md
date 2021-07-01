@@ -7,6 +7,6 @@ cat artifactory*.log  | awk -F '|' '{ sum += $7 }; END { print sum }
 
 
 
-The traffic log analyser can be run in Mac for the traffic log files using a regular expression ending with *.log, you can change it accordingly according to your requirement
+The traffic log analyser can be run in Mac for the traffic log files using a regular expression ending with *.log, you can change it accordingly based on your requirement
 
 find . -name "*.log" | while read f ; do ./trafficloganalyser.py $f ; done
