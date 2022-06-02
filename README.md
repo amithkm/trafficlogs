@@ -1,7 +1,7 @@
 # trafficlogs
 How to analyse traffic logs from artifactory and Xray 
 
-**What is the data usage as per the traffic logs located in current directory
+**What is the total data usage as per the traffic logs located in current directory
 **
 
 
