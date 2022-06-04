@@ -12,9 +12,10 @@ cat artifactory*.log  | awk -F '|' '{ sum += $7 }; END { print sum }'
 grep 'DOWNLOAD|' * | awk -F '|' '{ print $6 "|" $7}' | sort | uniq -c | sort -nr | head -n 20
 
 
-**The traffic log analyser can be run in Mac for the traffic log files using a regular expression ending with *.log, you can change it accordingly based on your requirement which will give us day wise repository wise break down**
+**The traffic log analyser can be run in Mac for the traffic log files using a regular expression ending with *.log,
+you can change it accordingly based on your requirement which will give us day wise repository wise break down**
 
-find . -name "*.log" | while read f ; do ./trafficloganalyser.py $f ; done
+$ find . -name "*.log" | while read f ; do ./trafficloganalyser.py $f ; done
 
 **Using below script, we should be able to find May month repository wise usage.**
 
