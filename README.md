@@ -21,7 +21,7 @@ find . -name "*.log" | while read f ; do ./trafficloganalyser.py $f ; done
 
 while read p ; do { print $p ;cat *.log | grep $p | grep '^202205'| awk -F '|'  '{ sum += $7 }; END  { print  sum "\n"  }'} done <repolist 
 
-** where repolist can be obtained using this** 
+** where repolist can be obtained using this **
 $cat artifactory*.log | awk -F '|'  '{ print $6 }' | awk -F ':' '{ print $1 }' | awk '!seen[$0]++'                                                                                                                                          
 
                                                                                                                                            
